@@ -87,7 +87,7 @@ To get a local copy up and running clone this repository using:
 
 ### Prerequisites
 
-In order to run this project you need to:
+In order to run this project you need to install:
 
 > PostgreSQL
 
@@ -163,7 +163,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> If you like this project, please give it some starts ⭐️⭐️⭐️⭐️⭐️
+> If you like this project, please give it some stars ⭐️⭐️⭐️⭐️⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,8 +178,6 @@ Contributions, issues, and feature requests are welcome!
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **How were the Linters utilised?**
 
