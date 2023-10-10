@@ -66,9 +66,7 @@ SELECT AVG(weight_kg) FROM animals;
 
 SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered;
 
-SELECT species, MIN(weight_kg) FROM animals GROUP BY species;
-
-SELECT species, MAX(weight_kg) FROM animals GROUP BY species;
+SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 
 SELECT species, date_of_birth, AVG(escape_attempts) AS average_escape_attempts
 FROM animals GROUP BY date_of_birth, species
