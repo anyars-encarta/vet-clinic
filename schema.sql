@@ -71,5 +71,5 @@ CREATE TABLE visits (
 	CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
 	ON DELETE CASCADE,
 	visit_date date,
-	PRIMARY KEY (animals_id, vets_id)
+	PRIMARY KEY (animals_id, vets_id, visit_date)
 );
