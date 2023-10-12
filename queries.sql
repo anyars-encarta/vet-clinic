@@ -156,3 +156,17 @@ ON visits.animals_id = animals.id
 JOIN vets
 ON vets.id = visits.vets_id
 ORDER BY visits.visit_date Desc;
+
+SELECT species.name as species, Count(animals.name) as visit_count, vets.name as vet
+FROM animals
+JOIN visits
+ON visits.animals_id = animals.id
+JOIN vets
+ON vets.id = visits.vets_id
+LEFT JOIN specializations
+ON specializations.vets_id = vets.id
+AND specializations.species_id = animals.species_id
+JOIN species
+ON species.id = animals.species_id
+WHERE specializations.species_id IS NULL
+GROUP BY species.name, vets.name;
