@@ -146,3 +146,13 @@ JOIN vets
 ON vets.id = visits.vets_id
 WHERE vets.name = 'Maisy Smith'
 ORDER BY visit_date;
+
+SELECT animals.name as animal, animals.date_of_birth, animals.escape_attempts as escapes, 
+animals.neutered, animals.weight_kg, vets.name as vet, vets.age, 
+vets.date_of_graduation as graduated_on, visits.visit_date
+FROM animals
+JOIN visits
+ON visits.animals_id = animals.id
+JOIN vets
+ON vets.id = visits.vets_id
+ORDER BY visits.visit_date Desc;
