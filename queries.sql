@@ -112,3 +112,10 @@ JOIN vets
 ON vets.id = visits.vets_id
 WHERE vets.name = 'Stephanie Mendez'
 GROUP BY species.name, vets.name;
+
+SELECT vets.name, vets.age, vets.date_of_graduation, species.name as specialization
+FROM vets
+FULL JOIN specializations
+ON specializations.vets_id = vets.id
+FULL JOIN species
+ON species.id = specializations.species_id;
