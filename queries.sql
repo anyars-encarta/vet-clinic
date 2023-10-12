@@ -101,3 +101,14 @@ JOIN vets
 ON vets.id = visits.vets_id
 WHERE vets.name = 'William Tatcher'
 ORDER BY visit_date Desc;
+
+SELECT species.name, Count(animals.name) as count_of_species, vets.name as seen_by
+FROM species
+JOIN animals
+ON animals.species_id = species.id
+JOIN visits
+ON visits.animals_id = animals.id
+JOIN vets
+ON vets.id = visits.vets_id
+WHERE vets.name = 'Stephanie Mendez'
+GROUP BY species.name, vets.name;
