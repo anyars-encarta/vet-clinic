@@ -137,3 +137,12 @@ JOIN vets
 ON vets.id = visits.vets_id
 GROUP BY animals.name
 ORDER BY visit_count Desc;
+
+SELECT animals.name, vets.name as seen_by, visit_date
+FROM animals
+JOIN visits
+ON visits.animals_id = animals.id
+JOIN vets
+ON vets.id = visits.vets_id
+WHERE vets.name = 'Maisy Smith'
+ORDER BY visit_date;
