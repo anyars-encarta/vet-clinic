@@ -92,3 +92,12 @@ JOIN owners
 ON animals.owner_id = owners.id
 GROUP BY full_name
 ORDER BY count_of_animals Desc;
+
+SELECT animals.name, vets.name as seen_by, visit_date
+FROM animals
+JOIN visits
+ON visits.animals_id = animals.id
+JOIN vets
+ON vets.id = visits.vets_id
+WHERE vets.name = 'William Tatcher'
+ORDER BY visit_date Desc;
