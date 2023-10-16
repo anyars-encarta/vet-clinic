@@ -74,3 +74,8 @@ INSERT INTO visits (animals_id, vets_id, visit_date) VALUES
 (64, 2, '2020-08-03'),
 (65, 3, '2020-05-24'),
 (65, 1, '2021-01-11');
+
+
+
+
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
