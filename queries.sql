@@ -185,3 +185,12 @@ ON species.id = animals.species_id
 WHERE specializations.species_id IS NULL
 AND vets.name = 'Maisy Smith'
 GROUP BY species.name, vets.name;
+
+CREATE INDEX animals_id_asc ON visits(animal_id ASC);
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+
+CREATE INDEX vets_id_asc ON visits(vet_id ASC);
+EXPLAIN ANALYZE SELECT id, animal_id, vet_id, date_of_visit FROM visits where vet_id = 2;
+
+CREATE INDEX owners_email_asc ON owners(email ASC);
+EXPLAIN ANALYZE SELECT full_name, age, email FROM owners where email = 'owner_18327@mail.com';
