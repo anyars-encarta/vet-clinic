@@ -186,11 +186,14 @@ WHERE specializations.species_id IS NULL
 AND vets.name = 'Maisy Smith'
 GROUP BY species.name, vets.name;
 
+-- index to animal id to enhannce data query time
 CREATE INDEX animals_id_asc ON visits(animal_id ASC);
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
 
+-- index to vet id to enhannce data query time
 CREATE INDEX vets_id_asc ON visits(vet_id ASC);
 EXPLAIN ANALYZE SELECT id, animal_id, vet_id, date_of_visit FROM visits where vet_id = 2;
 
+-- index to vet email to enhannce data query time
 CREATE INDEX owners_email_asc ON owners(email ASC);
 EXPLAIN ANALYZE SELECT full_name, age, email FROM owners where email = 'owner_18327@mail.com';
