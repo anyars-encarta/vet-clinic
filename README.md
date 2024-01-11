@@ -40,7 +40,7 @@
 # 📖 [Encarta Vet Clinic] <a name="about-project"></a>
 
 
-**Encarta Vet Clinic** is a database related application to keep track of vetrinary details of animals. The schema was created with PostgreSQL. The tables have relationships
+**Encarta Vet Clinic** is a database related application to keep track of vetrinary details of animals. The schema was created with PostgreSQL. The tables have relationships specified
 
 ## 🛠 Built With <a name="built-with"></a>
 
