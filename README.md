@@ -42,6 +42,8 @@
 
 **Encarta Vet Clinic** is a database related application to keep track of vetrinary details of animals. The schema was created with PostgreSQL. The tables have relationships specified in the schema structure.
 
+**Encarta Vet Clinic** is a database related application to keep track of vetrinary details of animals. The schema was created with PostgreSQL. The tables have relationships specified in the schema structure.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
